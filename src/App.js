@@ -1,6 +1,7 @@
 import './App.css';
 import {useEffect, useState, setToken} from 'react';
 import GetTopTracks from'./GetTopTracks';
+import GetTopArtists from './GetTopArtists';
 
 
 function App() {
@@ -55,6 +56,7 @@ example spotify parameters after logging in which generates the user's access to
                       to Spotify</a>
 
                       <GetTopTracks />
+                      <GetTopArtists />
             </header>
 
         </div>
