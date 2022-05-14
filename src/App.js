@@ -1,13 +1,18 @@
 import './App.css';
 import {useEffect, useState, setToken} from 'react';
-import GetTopTracks from'./GetTopTracks';
-import GetTopArtists from './GetTopArtists';
 
+import Navbar from './components/NavigationBar';
+import { BrowserRouter as Router, Routes, Route}
+    from 'react-router-dom';
+import Home from './pages/home';
+import Quiz from './pages/quiz';
+import TopArtists from './pages/topartists';
+import TopTracks from './pages/toptracks';
 
 function App() {
   // REDIRECT_URI will change when we set up a home page  
   const CLIENT_ID = "e5caca910c8b4916ad947b87dc2f36e2"
-  const REDIRECT_URI = "http://localhost:3000"
+  const REDIRECT_URI = "http://localhost:3000/home"
   const AUTH_ENDPOINT = "https://accounts.spotify.com/authorize"
 
   // scopes required to get info from user
@@ -55,8 +60,15 @@ example spotify parameters after logging in which generates the user's access to
                   <a href={`${AUTH_ENDPOINT}?client_id=${CLIENT_ID}&redirect_uri=${REDIRECT_URI}&scope=${SCOPES_URL_PARAM}&response_type=token&show_dialog=true`}>Login
                       to Spotify</a>
 
-                      <GetTopTracks />
-                      <GetTopArtists />
+                      <Router>
+                      <Navbar />
+                      <Routes>
+                          <Route path='/home' element={<Home />} />
+                          <Route path='/quiz' element={<Quiz/>} />
+                          <Route path='/topartists' element={<TopArtists/>} />
+                          <Route path='/toptracks' element={<TopTracks/>} />
+                      </Routes>
+                      </Router>
             </header>
 
         </div>
