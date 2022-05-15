@@ -16,7 +16,7 @@ const GetTopArtists = () => {
         }
     }, []);
 
-    const TopArtistsLongTerm = () => {
+     const TopArtistsLongTerm = () => {
         axios
         .get(
             TOP_ARTISTS_ENDPOINT, {
@@ -82,7 +82,6 @@ const GetTopArtists = () => {
         <button onClick={TopArtistsLongTerm}>Get all-time top artists</button>
  
         {data?.items ? data.items.map((item) => <p>{item.name}</p>) : null}
-        
         </div>
     ) 
     
