@@ -16,7 +16,7 @@ const GetTopArtists = () => {
         }
     }, []);
 
-     const TopArtistsLongTerm = () => {
+      const TopArtistsLongTerm = () => {
         axios
         .get(
             TOP_ARTISTS_ENDPOINT, {
@@ -34,7 +34,7 @@ const GetTopArtists = () => {
         });
     };
 
-    const TopArtistsMediumTerm = () => {
+     const TopArtistsMediumTerm = () => {
         axios
         .get(
             TOP_ARTISTS_ENDPOINT, {
@@ -52,7 +52,7 @@ const GetTopArtists = () => {
         });
     };
 
-    const TopArtistsShortTerm = () => {
+     const TopArtistsShortTerm = () => {
         axios
         .get(
             TOP_ARTISTS_ENDPOINT, {
