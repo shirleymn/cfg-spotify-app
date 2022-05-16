@@ -5,9 +5,9 @@ import { Nav, NavLink, NavMenu }
 const Navbar = () => {
   return (
     <>
-      <Nav>
-        <NavMenu>
-          <NavLink to="/home" activeStyle>
+      <Nav className="navbar">
+        <NavMenu className="navbar-items">
+          <NavLink  to="/home" activeStyle>
             Home
           </NavLink>
           <NavLink to="/quiz" activeStyle>
