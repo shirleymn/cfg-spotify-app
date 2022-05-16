@@ -15,7 +15,7 @@ function App() {
       <div className="App" >
           <header className="App-header">
           
-              <h1 className='app-name' >Top Spot</h1>
+              {/* <h1 className='app-name' >Top Spot</h1> */} 
                       <Authorise />
                       <Router>
                       <Navbar />

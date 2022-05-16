@@ -7,6 +7,9 @@ const Navbar = () => {
     <>
       <Nav className="navbar">
         <NavMenu className="navbar-items">
+        <Nav to="/home" activeStyle>
+            <h1 className="app-name">Top Spot.</h1>
+          </Nav>
           <NavLink  to="/home" activeStyle>
             Home
           </NavLink>
