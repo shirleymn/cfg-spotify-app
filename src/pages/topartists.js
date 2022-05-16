@@ -3,7 +3,7 @@ import GetTopArtists from '../GetTopArtists';
 import TopArtistsShortTerm from '../GetTopArtists';
 import TopArtistsMediumTerm from '../GetTopArtists';
 import TopArtistsLongTerm from '../GetTopArtists';
-import './topartists.css';
+import '../styles/pages/topartists.css';
 import MainTabs from '../components/Tabs';
 
   

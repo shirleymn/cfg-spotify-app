@@ -44,19 +44,15 @@ example spotify parameters after logging in which generates the user's access to
         localStorage.setItem("accessToken", access_token);
         localStorage.setItem("tokenType", token_type);
         localStorage.setItem("expiresIn", expires_in);
-        setLoggedIn(true)
       }
     });
 
   return (
       <div className="Authorise">
             <header className="Authorise-header">
-            { !loggedIn ?
-                  <a href={`${AUTH_ENDPOINT}?client_id=${CLIENT_ID}&redirect_uri=${REDIRECT_URI}&scope=${SCOPES_URL_PARAM}&response_type=token&show_dialog=true`}>Login
-                      to Spotify</a>
-                      : 
-                        <h3>logged in</h3>
-            }
+                  <a href={`${AUTH_ENDPOINT}?client_id=${CLIENT_ID}&redirect_uri=${REDIRECT_URI}&scope=${SCOPES_URL_PARAM}&response_type=token&show_dialog=true`}>
+                    Login to Spotify
+                    </a>
             </header>
             
         </div>

@@ -70,9 +70,9 @@ const GetTopTracks = () => {
 
     return (
         <div>
-        <button onClick={TopTracksShortTerm}>Past 4 weeks top tracks</button>   
-        <button onClick={TopTracksMediumTerm}>Past 6 months top tracks</button>
-        <button onClick={TopTracksLongTerm}>Get all-time top tracks</button>
+        <button onClick={TopTracksShortTerm}>Last 4 Weeks</button>   
+        <button onClick={TopTracksMediumTerm}>Last 6 Months</button>
+        <button onClick={TopTracksLongTerm}>All Time</button>
  
         {data?.items ? data.items.map((item) => <p>{item.name}</p>) : null}
         

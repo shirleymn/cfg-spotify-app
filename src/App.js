@@ -1,6 +1,6 @@
 import './App.css';
 
-import Navbar from './components/Navbar';
+import NavbarTest from './components/Navbar';
 import { BrowserRouter as Router, Routes, Route}
     from 'react-router-dom';
 import Authorise from './pages/authorise';
@@ -14,12 +14,10 @@ function App() {
   return (
       <div className="App">
           <header className="App-header">
-          
-              <h1>Top Spot</h1>
-                      <Authorise />
                       <Router>
-                      <Navbar />
+                      <NavbarTest />
                       <Routes>
+                        <Route path='/' element={<Authorise />} />
                           <Route path='/home' element={<Home />} />
                           <Route path='/quiz' element={<Quiz/>} />
                           <Route path='/topartists' element={<TopArtists/>} />
