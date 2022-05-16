@@ -17,7 +17,7 @@ nav.navbar {
   position: fixed;
   top: 22px;
   padding-right: 50px;
-  border-bottom: 3px solid darkgray;
+  border-bottom: 3px solid lightgray;
   font-size: 25px;}
 
 
@@ -30,7 +30,7 @@ nav.navbar {
   padding-left: 20px;
   font-size: 45px;
   font-weight: 900;
-  border-bottom: 3px solid darkgray;
+  border-bottom: 3px solid lightgray;
   padding-bottom: 16px;
 
 }
