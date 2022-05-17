@@ -1,0 +1,45 @@
+/* body {
+    background-image: url("./img2.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+} */
+
+.homepage-msg {
+    font-size: 30px;
+    position: relative;
+    left: -400px;
+    top: 100px;
+}
+
+.btn-link {
+    color: #10B981;
+    text-decoration: none;
+
+  }
+
+.take-quiz-btn {
+    font-size: 25px;
+    width: 300px;
+    height: 69px;
+    position: relative;
+    left: -400px;
+    top: 100px;
+    background-color: #FFFFFF;
+    color:#10B981;
+    padding: 15px 32px;
+    text-align: center;
+    border-radius: 40px;
+    border: none;
+    box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
+
+}
+    
+
+.skip-text {
+    font-size: 15px;
+    position: relative;
+    left: -400px;
+    top: 100px;
+    text-decoration: underline;
+}
+
