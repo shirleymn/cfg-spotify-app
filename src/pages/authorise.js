@@ -1,5 +1,4 @@
-// import './Authorise.css';
-import {useEffect, useState, setToken} from 'react';
+import {useEffect, useState} from 'react';
 
 function Authorise() {
 
@@ -47,24 +46,22 @@ example spotify parameters after logging in which generates the user's access to
         setLoggedIn(true)
       }
     });
+    
+    const Login = () => {
+      window.location = `${AUTH_ENDPOINT}?client_id=${CLIENT_ID}&redirect_uri=${REDIRECT_URI}&scope=${SCOPES_URL_PARAM}&response_type=token&show_dialog=false`;
+    };
 
   return (
       <div className="Authorise">
             <header className="Authorise-header">
             { !loggedIn ?
-                  <a href={`${AUTH_ENDPOINT}?client_id=${CLIENT_ID}&redirect_uri=${REDIRECT_URI}&scope=${SCOPES_URL_PARAM}&response_type=token&show_dialog=true`}>Login
-                      to Spotify</a>
-                      : 
-                        <h3>logged in</h3>
+                  <button onClick={Login}>Login to Spotify</button>
+                    
+              :<div></div>
             }
             </header>
-            
         </div>
-
-    
   );
-}
+} 
   
-
-
 export default Authorise;

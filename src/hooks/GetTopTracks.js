@@ -6,6 +6,7 @@ const TOP_TRACKS_ENDPOINT = `https://api.spotify.com/v1/me/top/tracks`
 const GetTopTracks = () => {
     const [access_token, setToken] = useState("");
     const [data, setData] = useState({});
+    
 
     useEffect(() => {
         if (localStorage.getItem('accessToken')) {
@@ -69,14 +70,18 @@ const GetTopTracks = () => {
   
 
     return (
-        <div>
+        <>
         <button onClick={TopTracksShortTerm}>Past 4 weeks top tracks</button>   
         <button onClick={TopTracksMediumTerm}>Past 6 months top tracks</button>
         <button onClick={TopTracksLongTerm}>Get all-time top tracks</button>
- 
         {data?.items ? data.items.map((item) => <p>{item.name}</p>) : null}
-        
-        </div>
+        {/* {data?.items ? data.items.map((item) => <p>{item.available_markets}</p>) : null} */}
+        {/* {data?.items ? data.items.map((item) => <p>{item.popularity}</p>) : null} */}
+        {/* {data?.items?.artists ? data.items.artists.map((artist) => <p>{artist.name}</p>) : console.log(data)} */}
+        {data?.items?.artists ? data.items.artists[0].map((artist) => <p>{artist.name}</p>) : null } 
+        {/* console.log(data.items[0].artists[0].name */}
+
+        </>
     ) 
     
 
