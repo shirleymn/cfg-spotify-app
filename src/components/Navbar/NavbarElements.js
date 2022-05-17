@@ -11,16 +11,15 @@ align-items: center;
 padding: 0.7rem 2rem;
 overflow: hidden;
 z-index: 1;
-width: 88.15%;
+width: 88%;
 margin: auto;
 top: 0;
 border-bottom: solid 5px rgb(243, 244, 246);
-// opacity: 0.9;
-top: 0;
 
 
-  
 `;
+
+
   
 export const NavLink = styled(Link)`
   color: black;
@@ -30,6 +29,7 @@ export const NavLink = styled(Link)`
   padding: 0 1rem;
   height: 100%;
   cursor: pointer;
+  margin-right: 50px;
   &.active {
     color: #10B981;
   }
@@ -46,7 +46,15 @@ export const Bars = styled(FaBars)`
     transform: translate(-100%, 75%);
     font-size: 1.8rem;
     cursor: pointer;
-    
+    .Bars ul {
+      position: absolute;
+      top: 60px;
+      left: 0;
+      flex-direction: column;
+      width: 100%;
+      height: calc(100vh - 77px);
+      background-color: white;
+      border-top: 1px solid black;
   }
 `;
   
