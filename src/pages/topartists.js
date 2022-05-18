@@ -1,11 +1,11 @@
 import React from 'react';
 import GetTopArtists from '../hooks/GetTopArtists';
+
 // import TopArtistsShortTerm from '../hooks/GetTopArtists';
 // import TopArtistsMediumTerm from '../hooks/GetTopArtists';
 // import TopArtistsLongTerm from '../hooks/GetTopArtists';
 import '../styles/pages/topartists.css';
 // import MainTabs from '../components/Tabs';
-
   
 const TopArtists = () => {
 

@@ -1,4 +1,5 @@
 import './App.css';
+import Header from './components/layout/header';
 import Navbar from './components/Navbar';
 import { BrowserRouter as Router, Routes, Route}
     from 'react-router-dom';
@@ -15,8 +16,9 @@ function App() {
           <header className="App-header">
                       <Authorise />
                       <Router>
-                      <Navbar />
+                      <Header />
                       <Routes>
+                          {/* <Route path='/' element={<Authorise />} /> */}
                           <Route path='/home' element={<Home />} />
                           <Route path='/quiz' element={<Quiz/>} />
                           <Route path='/topartists' element={<TopArtists/>} />

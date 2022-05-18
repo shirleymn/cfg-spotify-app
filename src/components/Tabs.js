@@ -1,7 +1,15 @@
 import React from 'react';
 import {Tabs, Tab, AppBar}  from "@material-ui/core"
+import GetTopArtists from '../hooks/GetTopArtists';
+import TopArtistsShortTerm from '../hooks/GetTopArtists';
+import TopArtistsMediumTerm from '../hooks/GetTopArtists';
+import TopArtistsLongTerm from '../hooks/GetTopArtists';
+
+import TopArtists from '../pages/topartists';
 import GetTopArtists from '../GetTopArtists';
+
 import { createTheme } from '@material-ui/core';
+
 
 const MainTabs = () => {
 
