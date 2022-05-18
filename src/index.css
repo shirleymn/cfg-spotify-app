@@ -14,20 +14,9 @@ body {
       monospace;
   }
   
-  nav.navbar {
-    right: 0px;
-    position: fixed;
-    top: 22px;
-    padding-right: 50px;
-    border-bottom: 3px solid lightgray;
-    font-size: 25px;
-    margin-bottom: 20px;
-}
   
-  
-  
-  .app-name {
-    color: black;
+  /* .app-name {
+    color: rgb(228, 30, 30);
     position: fixed;
     top: 0;
     left: 0;
@@ -37,4 +26,4 @@ body {
     border-bottom: 3px solid lightgray;
     padding-bottom: 16px;
   
-  }
+  } */

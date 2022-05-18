@@ -1,6 +1,8 @@
+import React from "react";
 import { FaBars } from "react-icons/fa";
 import { NavLink as Link } from "react-router-dom";
 import styled from "styled-components";
+import '../styles/components/Navbar.css'
   
 export const Nav = styled.nav`
 background: #fff;
@@ -71,3 +73,32 @@ white-space: nowrap; */
     display: none;
   }
 `;
+
+const Navbar = () => {
+  return (
+    <>
+      <Nav >
+        <NavLink to="/">
+          <h1>TopSpot.</h1>
+        </NavLink>
+        <Bars/>
+        <NavMenu className="navigation-menu">
+          <NavLink to="/home" activeStyle>
+            Home
+          </NavLink>
+          <NavLink to="/quiz" activeStyle>
+            Quiz
+          </NavLink>
+          <NavLink to="/toptracks" activeStyle>
+            Top Tracks
+          </NavLink>
+          <NavLink to="topartists" activeStyle>
+            Top Artists
+          </NavLink>
+        </NavMenu>
+      </Nav>
+    </>
+  );
+};
+  
+export default Navbar;

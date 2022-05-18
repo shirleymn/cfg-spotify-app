@@ -1,5 +1,5 @@
 import React from 'react';
-import GetTopTracks from '../GetTopTracks';
+import GetTopTracks from '../hooks/GetTopTracks';
 const TopTracks = () => {
   return (
       <div>

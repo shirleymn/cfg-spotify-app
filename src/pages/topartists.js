@@ -1,10 +1,10 @@
 import React from 'react';
-import GetTopArtists from '../GetTopArtists';
-import TopArtistsShortTerm from '../GetTopArtists';
-import TopArtistsMediumTerm from '../GetTopArtists';
-import TopArtistsLongTerm from '../GetTopArtists';
-import './topartists.css';
-import MainTabs from '../components/Tabs';
+import GetTopArtists from '../hooks/GetTopArtists';
+// import TopArtistsShortTerm from '../hooks/GetTopArtists';
+// import TopArtistsMediumTerm from '../hooks/GetTopArtists';
+// import TopArtistsLongTerm from '../hooks/GetTopArtists';
+import '../styles/pages/topartists.css';
+// import MainTabs from '../components/Tabs';
 
   
 const TopArtists = () => {
