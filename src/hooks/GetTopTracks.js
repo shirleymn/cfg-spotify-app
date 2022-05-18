@@ -71,8 +71,6 @@ const GetTopTracks = () => {
 
         });
     };
-  
-
     return (
         <>
         <button onClick={TopTracksShortTerm}>Last 4 Weeks</button>   
@@ -86,21 +84,13 @@ const GetTopTracks = () => {
                 <div className="names-column">
                     <div className="track-name"><p>{item.name}</p></div>
                     <div className="artist-name"><p>{item.artists[0].name}</p></div>
-                </div>
-                
-                
+
+                </div>               
             </div> )
         : null
         }
-        
-        
-
         </>
     ) 
-    
-
 };
-
-
 
 export default GetTopTracks;

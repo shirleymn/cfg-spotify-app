@@ -1,5 +1,6 @@
 import './App.css';
 import Header from './components/layout/header';
+import Navbar from './components/Navbar';
 import { BrowserRouter as Router, Routes, Route}
     from 'react-router-dom';
 import Authorise from './pages/authorise';
