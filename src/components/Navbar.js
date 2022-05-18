@@ -78,22 +78,22 @@ const Navbar = () => {
   return (
     <>
       <Nav >
+        <Bars/>
+        <NavMenu className="navigation-menu">
         <NavLink to="/">
           <h1>TopSpot.</h1>
         </NavLink>
-        <Bars/>
-        <NavMenu className="navigation-menu">
           <NavLink to="/home" activeStyle>
             Home
           </NavLink>
           <NavLink to="/quiz" activeStyle>
             Quiz
           </NavLink>
-          <NavLink to="/toptracks" activeStyle>
-            Top Tracks
-          </NavLink>
           <NavLink to="topartists" activeStyle>
             Top Artists
+          </NavLink>
+          <NavLink to="/toptracks" activeStyle>
+            Top Tracks
           </NavLink>
         </NavMenu>
       </Nav>

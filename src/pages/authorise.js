@@ -59,7 +59,7 @@ example spotify parameters after logging in which generates the user's access to
             { !loggedIn ?
                   <button onClick={Login}>Login to Spotify</button>
                     
-              :<div></div>
+              :null
             }
             </header>
         </div>
