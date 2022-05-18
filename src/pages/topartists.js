@@ -14,9 +14,9 @@ const TopArtists = () => {
   return (
       <div className='main_section'>
     <h1 className='main_heading'>Your Top Artists</h1>
-    {/* <GetTopArtists /> */}
-   
-    <MainTabs />
+    <GetTopArtists />
+    
+    {/* <MainTabs /> */}
 
 
     </div>

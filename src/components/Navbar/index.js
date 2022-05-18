@@ -1,26 +1,27 @@
 import React from "react";
-import { Nav, NavLink, NavMenu } 
+import { Bars, Nav, NavLink, NavMenu } 
     from "./NavbarElements";
   
 const Navbar = () => {
   return (
     <>
-      <Nav className="navbar">
-        <NavMenu className="navbar-items">
-        <Nav to="/home" activeStyle>
-            <h1 className="app-name">Top Spot.</h1>
-          </Nav>
-          <NavLink  to="/home" activeStyle>
+      <Nav >
+        <NavLink to="/">
+          <h1>TopSpot.</h1>
+        </NavLink>
+        <Bars/>
+        <NavMenu className="navigation-menu">
+          <NavLink to="/home" activeStyle>
             Home
           </NavLink>
           <NavLink to="/quiz" activeStyle>
             Quiz
           </NavLink>
-          <NavLink to="/topartists" activeStyle>
-            Top Artists
-          </NavLink>
           <NavLink to="/toptracks" activeStyle>
             Top Tracks
+          </NavLink>
+          <NavLink to="topartists" activeStyle>
+            Top Artists
           </NavLink>
         </NavMenu>
       </Nav>
