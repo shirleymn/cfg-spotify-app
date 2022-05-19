@@ -1,0 +1,20 @@
+.text-button {
+    background: white;
+    border: none;
+    margin-right: 50px;
+    border-bottom: 4px solid #F3F4F6;
+    padding:0;
+    cursor: pointer;
+    padding: 30px 16px;
+    text-align: center;
+    font-size: 25px;    
+}
+
+.text-button:focus {
+    color: #10B981;
+    transform: translateY(2px);
+   } 
+
+
+
+
