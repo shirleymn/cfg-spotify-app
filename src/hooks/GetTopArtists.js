@@ -85,6 +85,7 @@ const GetTopArtists = () => {
 
         <br/> {/* spacing between buttons and results */}
         <br/>
+        
        
 
        {/* <Button onClick={TopArtistsShortTerm}/>  */}
@@ -96,20 +97,21 @@ const GetTopArtists = () => {
                 <div className="rank-column"><p className="rank">{data.items.indexOf(item)+1}</p></div>
                 <div className="image-column"><img src= {item.images[1].url}></img></div>
                 <div className="names-column"><p>{item.name}</p></div>
-                </div>               
+                <br/>    
+            </div>  
+            
+            
+                             
             )
+            
         : null
+        
+        
         }
         
-   
-        
-        
-        
-        
-        
-        
-        
         </>
+        
+        
 
     ) 
     

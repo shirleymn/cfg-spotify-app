@@ -80,6 +80,7 @@ const GetTopTracks = () => {
         <br/> {/* spacing between buttons and results */}
         <br/>
         
+        
         {data?.items ? data.items.map((item) =>
             <div className="container" key={item.name + '_' + item.artists[0].name + '_' + item.album.images[1].url}>
                 <div className="rank-column"><p className="rank">{data.items.indexOf(item)+1}</p></div>
@@ -87,8 +88,9 @@ const GetTopTracks = () => {
                 <div className="names-column">
                     <div className="track-name"><p>{item.name}</p></div>
                     <div className="artist-name"><p>{item.artists[0].name}</p></div>
-
-                </div>               
+                    
+                </div> 
+                <br/>              
             </div> )
         : null
         }
