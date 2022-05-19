@@ -6,16 +6,16 @@
 
 .homepage-msg {
     font-size: 30px;
-    position: fixed;
-    left: 10vw;
-    top: 30vh;
+    position: relative;
+    left: -400px;
+    top: 100px;
 }   
 
 .skip-text {
     font-size: 15px;
-    position: fixed;
-    left: 16vw;
-    top: 49vh;
+    position: relative;
+    left: -400px;
+    top: 100px;
     text-decoration: underline;
 }
 

@@ -29,9 +29,9 @@ const NavLink = styled(Link)`
     cursor: default;
     opacity: 0.5;
   }
-  position: fixed;
-  left: 13vw;
-  top: 29rem;
+  position: relative;
+  left: -400px;
+  top: 88px;
 `;
 
 NavLink.defaultProps = {
