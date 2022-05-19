@@ -83,6 +83,10 @@ const GetTopArtists = () => {
         <button  className="text-button" onClick={TopArtistsMediumTerm}>Last 6 Months</button>
         <button   className="text-button" onClick={TopArtistsLongTerm}>All Time</button>
 
+        <br/> {/* spacing between buttons and results */}
+        <br/>
+       
+
        {/* <Button onClick={TopArtistsShortTerm}/>  */}
 
         {/* {data?.items ? data.items.map((item) => <p>{item.name}</p>) : null} */}

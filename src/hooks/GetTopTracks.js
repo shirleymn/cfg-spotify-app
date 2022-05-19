@@ -77,6 +77,9 @@ const GetTopTracks = () => {
         <button className="text-button" onClick={TopTracksMediumTerm}>Last 6 Months</button>
         <button className="text-button" onClick={TopTracksLongTerm}>All Time</button>
 
+        <br/> {/* spacing between buttons and results */}
+        <br/>
+        
         {data?.items ? data.items.map((item) =>
             <div className="container" key={item.name + '_' + item.artists[0].name + '_' + item.album.images[1].url}>
                 <div className="rank-column"><p className="rank">{data.items.indexOf(item)+1}</p></div>
