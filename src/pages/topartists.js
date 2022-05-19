@@ -16,7 +16,7 @@ const TopArtists = () => {
     <h1 className='main_heading'>Your Top Artists</h1>
     <GetTopArtists />
     
-    {/* <MainTabs /> */}
+
 
 
     </div>

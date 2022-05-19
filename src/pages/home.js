@@ -6,7 +6,7 @@ const Home = () => {
  
 
   return (
-    <div >
+    <div className="homepage-bg">
       {/* <h1 className="home-header">
         Home page
       </h1> */}

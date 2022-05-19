@@ -73,9 +73,9 @@ const GetTopTracks = () => {
     };
     return (
         <>
-        <button onClick={TopTracksShortTerm}>Last 4 Weeks</button>   
-        <button onClick={TopTracksMediumTerm}>Last 6 Months</button>
-        <button onClick={TopTracksLongTerm}>All Time</button>
+        <button className="text-button" onClick={TopTracksShortTerm}>Last 4 Weeks</button>   
+        <button className="text-button" onClick={TopTracksMediumTerm}>Last 6 Months</button>
+        <button className="text-button" onClick={TopTracksLongTerm}>All Time</button>
 
         {data?.items ? data.items.map((item) =>
             <div className="container" key={item.name + '_' + item.artists[0].name + '_' + item.album.images[1].url}>
