@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios";
-import { Button } from "@material-ui/core";
 import '../styles/hooks/GetTopArtists.css'
+import '../styles/components/Button.css' 
 
 const TOP_ARTISTS_ENDPOINT = `https://api.spotify.com/v1/me/top/artists`
 
@@ -14,6 +14,7 @@ const GetTopArtists = () => {
         if (localStorage.getItem('accessToken')) {
             setToken(localStorage.getItem("accessToken"));
         }
+        console.log(data)
     }, []);
 
       const TopArtistsLongTerm = () => {
@@ -72,9 +73,16 @@ const GetTopArtists = () => {
 
     return (
         <>
-        <button class="astext" onClick={TopArtistsShortTerm}>Past 4 weeks top artists</button>   
-        <button  class="astext" onClick={TopArtistsMediumTerm}>Past 6 months top artists</button>
-        <button   class="astext" onClick={TopArtistsLongTerm}>Get all-time top artists</button>
+        <button  className="text-button" onClick={TopArtistsShortTerm}>Last 4 Weeks</button>   
+        <button  className="text-button" onClick={TopArtistsMediumTerm}>Last 6 Months</button>
+        <button   className="text-button" onClick={TopArtistsLongTerm}>All Time</button>
+
+        <br/> {/* spacing between buttons and results */}
+        <br/>
+        
+       
+
+       {/* <Button onClick={TopArtistsShortTerm}/>  */}
 
         {/* {data?.items ? data.items.map((item) => <p>{item.name}</p>) : null} */}
         
@@ -83,12 +91,16 @@ const GetTopArtists = () => {
                 <div className="rank-column"><p className="rank">{data.items.indexOf(item)+1}</p></div>
                 <div className="image-column"><img src= {item.images[1].url}></img></div>
                 <div className="names-column"><p>{item.name}</p></div>
-                </div>               
+                <br/>    
+            </div>  
+            
+            
+                             
             )
+            
         : null
         }
         </>
     ) 
 };
-
 export default GetTopArtists
