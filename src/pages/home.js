@@ -41,9 +41,6 @@ NavLink.defaultProps = {
 
 
 const Home = () => {
-
- 
-
   return (
     <div >
       <div>

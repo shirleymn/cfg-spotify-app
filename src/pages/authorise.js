@@ -1,4 +1,43 @@
-import {useEffect, useState} from 'react';
+import React, {useEffect, useState} from 'react';
+import styled from "styled-components";
+
+
+const Button = styled.h1`
+background-color: ${(props) => bg[props.bg].default};
+color: black;
+font-size: 25px;
+padding: 15px 32px;
+border-radius: 40px;
+margin: 10px 0px;
+cursor: pointer;
+box-shadow: 0px 8px 8px lightgray;
+transition: ease background-color 250ms;
+&:hover {
+  background-color: ${(props) => bg[props.bg].hover};
+}
+&:disabled {
+  cursor: default;
+  opacity: 0.5;
+}
+position: fixed;
+left: 13vw;
+top: 29rem;
+`;
+
+const bg = {
+  white: {
+    default: "#ffffff",
+    hover: "#d6d6d6"
+  }
+}
+
+Button.defaultProps = {
+  bg: "white"
+};
+
+
+
+
 
 
 function Authorise() {
@@ -56,9 +95,10 @@ example spotify parameters after logging in which generates the user's access to
   return (
     <>
       { !loggedIn ?
-        <button onClick={Login}>Login to Spotify</button>      
+        <Button onClick={Login}>Login to Spotify</Button>      
           :null
         }
+
     </>
   );
 } 
