@@ -17,6 +17,7 @@ const GetTopArtists = () => {
         if (localStorage.getItem('accessToken')) {
             setToken(localStorage.getItem("accessToken"));
         }
+        console.log(data)
     }, []);
 
       const TopArtistsLongTerm = () => {
