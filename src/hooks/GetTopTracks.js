@@ -25,15 +25,20 @@ const GetTopTracks = () => {
                 Accept: 'application/json',
                 Authorization: "Bearer " + access_token,
                 'content-type': 'application/json'
+                
             }
+            
         }).then(response => {
+        
             setData(response.data);
+        
         })
         .catch((error) => {
             console.log(error)
             setError(true);
         });
     };
+
 
     const TopTracksMediumTerm = () => {
         axios

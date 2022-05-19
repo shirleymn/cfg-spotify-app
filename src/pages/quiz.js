@@ -1,8 +1,16 @@
 import React from 'react';
+import QuizLogic from '../hooks/Quiz.js'
+import QuizTopTracksData from '../QuizTopTracksData'
+
   
 const Quiz = () => {
   return (
-    <h1>Quiz</h1>
+    <div>
+      <h1>Quiz</h1> 
+      {/* <QuizLogic /> */} 
+      <QuizTopTracksData />
+    </div>
+    
   );
 };
   
