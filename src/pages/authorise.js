@@ -1,5 +1,4 @@
-// import '../styles/pages/authorise.css';
-import {useEffect, useState, setToken} from 'react';
+import {useEffect, useState} from 'react';
 
 
 function Authorise() {
@@ -22,7 +21,7 @@ example spotify parameters after logging in which generates the user's access to
 */
 
 // getting access token from URL
-  const getReturnedParametersFromSpotifyAuth = (hash) => {
+  const authParams = (hash) => {
     const stringAfterHashtag = hash.substring(1);
     const parametersInUrl = stringAfterHashtag.split("&");
     const parametersSplit = parametersInUrl.reduce((accumulater, currentValue) => {
@@ -38,7 +37,7 @@ example spotify parameters after logging in which generates the user's access to
     useEffect(() => {
       if (window.location.hash) {
         const { access_token, expires_in, token_type } =
-          getReturnedParametersFromSpotifyAuth(window.location.hash);
+          authParams(window.location.hash);
   
         localStorage.clear();
   
@@ -51,18 +50,16 @@ example spotify parameters after logging in which generates the user's access to
     
     const Login = () => {
       window.location = `${AUTH_ENDPOINT}?client_id=${CLIENT_ID}&redirect_uri=${REDIRECT_URI}&scope=${SCOPES_URL_PARAM}&response_type=token&show_dialog=false`;
+      
     };
 
   return (
-      <div className="Authorise">
-            <header className="Authorise-header">
-            { !loggedIn ?
-                  <button onClick={Login}>Login to Spotify</button>
-                    
-              :null
-            }
-            </header>
-        </div>
+    <>
+      { !loggedIn ?
+        <button onClick={Login}>Login to Spotify</button>      
+          :null
+        }
+    </>
   );
 } 
   

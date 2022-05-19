@@ -3,10 +3,7 @@ import axios from "axios";
 import { Button } from "@material-ui/core";
 import '../styles/hooks/GetTopArtists.css'
 
-
 const TOP_ARTISTS_ENDPOINT = `https://api.spotify.com/v1/me/top/artists`
-
-
 
 const GetTopArtists = () => {
 
@@ -73,10 +70,6 @@ const GetTopArtists = () => {
         });
     };
 
-    
-
-  
-
     return (
         <>
         <button class="astext" onClick={TopArtistsShortTerm}>Past 4 weeks top artists</button>   
@@ -94,21 +87,8 @@ const GetTopArtists = () => {
             )
         : null
         }
-        
-        
-        
-        
-        
-        
-        
-        
-        
         </>
     ) 
-    
-
 };
-
-
 
 export default GetTopArtists

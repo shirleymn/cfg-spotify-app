@@ -8,17 +8,19 @@ import Home from './pages/home';
 import Quiz from './pages/quiz';
 import TopArtists from './pages/topartists';
 import TopTracks from './pages/toptracks';
+import Login from './pages/login';
+import './styles/hooks/Authorise.css'
 
 function App() {
   
   return (
       <div className="App" >
           <header className="App-header">
-                      <Authorise />
+                      <div><Authorise /></div>
                       <Router>
                       <Header />
                       <Routes>
-                          {/* <Route path='/' element={<Authorise />} /> */}
+                          <Route path='/' element={<Login />} />
                           <Route path='/home' element={<Home />} />
                           <Route path='/quiz' element={<Quiz/>} />
                           <Route path='/topartists' element={<TopArtists/>} />
