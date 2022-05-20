@@ -1,10 +1,19 @@
-import React from 'react';
+import React, {useEffect} from 'react';
 import '../styles/pages/login.css'
 import login from '../styles/pages/login.jpg';
   
 
 const Login = () => {
+
+  useEffect(() => {
+    document.body.classList.add("no-scroll");
+    return () => {
+        document.body.classList.remove("no-scroll");
+    };
+  }, []);
+
   return (
+    
     <>
       <h1>TopSpot.</h1>
       <h4>Do you know your music taste?</h4>

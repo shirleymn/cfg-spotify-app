@@ -1,7 +1,10 @@
-html, body {
+.no-scroll {
   margin: 0;
   height: 100%; 
   overflow: hidden}
+
+
+
 
 h1 {
   z-index: 1;
@@ -16,6 +19,7 @@ p {
   z-index: 1;
   margin-top: 0;
 }
+
 
 
 .bg {

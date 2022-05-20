@@ -1,4 +1,4 @@
-import React from "react";
+import React, {useEffect} from 'react';
 import '../styles/pages/home.css';
 import styled from "styled-components";
 import { NavLink as Link } from "react-router-dom";
@@ -54,8 +54,17 @@ const Skip = styled(Link)`
 `;
 
 const Home = () => {
+  
+  useEffect(() => {
+    document.body.classList.add("no-scroll");
+    return () => {
+        document.body.classList.remove("no-scroll");
+    };
+  }, []);
+
+
   return (
-    <div >
+    <div>
       <div>
       <p className="homepage-msg">Before discovering your top <br></br>tracks and artists, take a<br></br> quiz to try to guess them </p>
       <NavLink to="/quiz" style={{ textDecoration: 'none' }}>Take the Quiz</NavLink>
