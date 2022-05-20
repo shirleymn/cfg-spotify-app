@@ -1,10 +1,8 @@
 import './App.css';
 import Header from './components/layout/header';
-// import Navbar from './components/Navbar';
-import Navbar from './components/Navbar'
-import { BrowserRouter as Router, Routes, Route}
+import { BrowserRouter as Router, Routes, Route, withRouter}
     from 'react-router-dom';
-import Authorise from './pages/authorise';
+import Authorise from './hooks/Authorise';
 import Home from './pages/home';
 import Quiz from './pages/quiz';
 import TopArtists from './pages/topartists';
@@ -12,14 +10,12 @@ import TopTracks from './pages/toptracks';
 import Login from './pages/login';
 import './styles/hooks/Authorise.css'
 
-function App() {
-  
-  return (
+const App = () => (
       <div className="App" >
           <header className="App-header">
-                      <div><Authorise /></div>
+                      <Authorise />
                       <Router>
-                      <Header />
+                      {window.location.pathname!=='/' ? <Header/>:null}
                       <Routes>
                           <Route path='/' element={<Login />} />
                           <Route path='/home' element={<Home />} />
@@ -28,15 +24,9 @@ function App() {
                           <Route path='/toptracks' element={<TopTracks/>} />
                       </Routes>
                       </Router>
-
             </header>
-
          </div>
-
-    
   );
-}
-  
 
 
 export default App;
