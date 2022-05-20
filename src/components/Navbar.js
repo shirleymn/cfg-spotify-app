@@ -5,10 +5,10 @@ import styled from "styled-components";
   
 const Nav = styled.nav`
 background: #fff;
-position: fixed;
+position: absolute;
 display: flex;
-justify-content: space-between;
-align-items: center;
+justify-content: space-around;
+align-items: centre;
 padding: 0.7rem 2rem;
 overflow: hidden;
 z-index: 1;
@@ -26,7 +26,8 @@ const NavLink = styled(Link)`
   padding: 0 1rem;
   height: 100%;
   cursor: pointer;
-  margin-right: 50px;
+  margin-right: 100px;
+  margin-left: 50px;
   &.active {
     color: #10B981;
   }
@@ -97,4 +98,3 @@ const Navbar = () => {
 };
   
 export default Navbar;
-

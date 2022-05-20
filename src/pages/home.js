@@ -8,7 +8,8 @@ import { NavLink as Link } from "react-router-dom";
 const bg = {
   white: {
     default: "#ffffff",
-    hover: "#d6d6d6"
+    hover: "#d6d6d6",
+    
   }
 }
 
