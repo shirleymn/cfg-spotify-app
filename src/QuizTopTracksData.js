@@ -16,28 +16,28 @@ const QuizTopTracksData = () => {
         }
     }, []);
 
-    const TopTracksLongTerm = () => {
-        axios
-        .get(
-            TOP_TRACKS_ENDPOINT, {
-                params: {limit: 4, offset: 0, time_range: 'long_term',},
-            headers: {
-                Accept: 'application/json',
-                Authorization: "Bearer " + access_token,
-                'content-type': 'application/json'
+    // const TopTracksLongTerm = () => {
+    //     axios
+    //     .get(
+    //         TOP_TRACKS_ENDPOINT, {
+    //             params: {limit: 4, offset: 0, time_range: 'long_term',},
+    //         headers: {
+    //             Accept: 'application/json',
+    //             Authorization: "Bearer " + access_token,
+    //             'content-type': 'application/json'
                 
-            }
+    //         }
             
-        }).then(response => {
+    //     }).then(response => {
         
-            setData(response.data);
+    //         setData(response.data);
         
-        })
-        .catch((error) => {
-            console.log(error)
-            setError(true);
-        });
-    };
+    //     })
+    //     .catch((error) => {
+    //         console.log(error)
+    //         setError(true);
+    //     });
+    // };
 
 
     // const TopTracksMediumTerm = () => {
@@ -58,28 +58,38 @@ const QuizTopTracksData = () => {
     //     });
     // };
 
-    // const TopTracksShortTerm = () => {
-    //     axios
-    //     .get(
-    //         TOP_TRACKS_ENDPOINT, {
-    //             params: {limit: 4, offset: 0, time_range: 'short_term',},
-    //         headers: {
-    //             Accept: 'application/json',
-    //             Authorization: "Bearer " + access_token,
-    //             'content-type': 'application/json'
-    //         }
-    //     }).then(response => {
-    //         setData(response.data);
-    //     })
-    //     .catch((error) => {
-    //         console.log(error)
+    const TopTracksShortTerm = () => {
+        axios
+        .get(
+            TOP_TRACKS_ENDPOINT, {
+                params: {limit: 4, offset: 0, time_range: 'short_term',},
+            headers: {
+                Accept: 'application/json',
+                Authorization: "Bearer " + access_token,
+                'content-type': 'application/json'
+            }
+        }).then(response => {
+            setData(response.data);
+        })
+        .catch((error) => {
+            console.log(error)
 
-    //     });
-    // };
+        });
+    };
     return (
         <>
 
-        <button onClick={TopTracksLongTerm}>Question 1</button>
+   
+
+        <button onClick={TopTracksShortTerm}>Hint</button>
+
+        <form>
+        <label>
+            Answer:
+            <input type="text" name="name" />
+        </label>
+        <input type="submit" value="Submit" />
+        </form>
 
         {data?.items ? data.items.map((item) =>
             <div className="container" key={item.name + '_' + item.artists[0].name + '_' + item.album.images[1].url}>
