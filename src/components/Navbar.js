@@ -32,6 +32,18 @@ const NavLink = styled(Link)`
     color: #10B981;
   }
 `;
+const NavLinkTitle = styled(Link)`
+  color: black;
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  padding: 0 1rem;
+  height: 100%;
+  cursor: pointer;
+  margin-right: 100px;
+  margin-left: 50px;
+`;
+
   
 const Bars = styled(FaBars)`
   display: none;
@@ -75,10 +87,10 @@ const Navbar = () => {
     <>
       <Nav >
         <Bars/>
-        <NavMenu className="navigation-menu">
-        <NavLink to="/">
+        <NavMenu>
+        <NavLinkTitle to="/home" activeStyle>
           <h1>TopSpot.</h1>
-        </NavLink>
+          </NavLinkTitle>
           <NavLink to="/home" activeStyle>
             Home
           </NavLink>

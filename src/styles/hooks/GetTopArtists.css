@@ -12,12 +12,10 @@ p {
     grid-template-rows: repeat(20, [row] );
     grid-column-gap: 0px;
     grid-row-gap: 50px;
-    /* background-color: rgb(177, 20, 20); */
 
 }
 
 .rank-column {
-    /* background-color: #8e3eda; */
     justify-self: end;
     align-self: center;
 
@@ -28,7 +26,6 @@ p {
 }
 
 .image-column {
-    /* background-color: #1898d4; */
     align-self: center;
     justify-self: center;
 
@@ -45,7 +42,6 @@ img {
     display: grid;
     grid-row-gap: 0px;
     grid-template-rows: 50px 50px;
-    /* background-color: #ce18d4; */
     justify-self: start;
     align-self: center;
 }

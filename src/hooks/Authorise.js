@@ -20,8 +20,7 @@ transition: ease background-color 250ms;
   opacity: 0.5;
 }
 position: fixed;
-left: 13vw;
-top: 29rem;
+top: 50%;
 `;
 
 const bg = {
@@ -34,10 +33,6 @@ const bg = {
 Button.defaultProps = {
   bg: "white"
 };
-
-
-
-
 
 
 function Authorise() {
