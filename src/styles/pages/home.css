@@ -1,3 +1,8 @@
+.no-scroll {
+    margin: 0;
+    height: 100%; 
+    overflow: hidden}
+
 .homepage-msg {
     font-size: 30px;
     position: relative;
