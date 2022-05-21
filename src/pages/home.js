@@ -3,6 +3,7 @@ import '../styles/pages/home.css';
 import styled from "styled-components";
 import { NavLink as Link } from "react-router-dom";
 import home from '../styles/pages/home.jpg';
+import {TopTracksShortTerm} from  "../QuizTopTracksData"
 
 
 
