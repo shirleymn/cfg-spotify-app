@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import QuizTopTracksData from '../QuizTopTracksData';
 
 const QuizLogic = () => {
 	const questions = [
@@ -44,6 +45,7 @@ const QuizLogic = () => {
 
 
 	return (
+		
 		<div className='app'>
 			{showScore ? (
 				<div className='score-section'>You scored {score} out of {questions.length}</div>
