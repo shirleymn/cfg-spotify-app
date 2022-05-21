@@ -50,7 +50,9 @@ const QuizLogic = () => {
       <h1 className='quiz-title'>Quiz</h1>
       <p className='quiz-subheading'>Discover how in tune you are with your music taste</p>
 			{showScore ? (
-				<div className='score-section'>You scored {score} out of {questions.length}</div>
+				<div className='score-section'>You scored <br></br> {score} / {questions.length}
+        <p className='user-prompt'>Want to know more? <br></br> Go see your top tracks and artists!</p>
+        </div>
 			) : (
 				<>
 					<div className='question-section'>

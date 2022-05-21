@@ -5,7 +5,8 @@
 .quiz-subheading {
     font-style: italic;
     font-weight: 100;
-    font-size: 25px;
+    font-size: 20px;
+    padding-bottom: 10px;
 
 }
 
@@ -53,4 +54,15 @@
 
 .answer-section {
     margin-bottom: 150px;
+}
+
+.score-section {
+    font-size: 50px;
+
+}
+
+.user-prompt {
+    padding-top: 40px;
+    font-size: 20px;
+
 }
