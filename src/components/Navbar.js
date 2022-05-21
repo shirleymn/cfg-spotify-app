@@ -17,6 +17,7 @@ margin: auto;
 top: 0;
 border-bottom: solid 5px rgb(243, 244, 246);
 `;
+
   
 const NavLink = styled(Link)`
   color: black;
@@ -85,7 +86,7 @@ white-space: nowrap; */
 const Navbar = () => {
   return (
     <>
-      <Nav >
+      <Nav data-testid="nav">
         <Bars/>
         <NavMenu>
         <NavLinkTitle to="/home" activeStyle>
