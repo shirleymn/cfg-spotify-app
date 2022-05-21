@@ -65,4 +65,4 @@ const QuizLogic = () => {
 	);
 }
 
-export default QuizLogic 
+export default QuizLogic;
