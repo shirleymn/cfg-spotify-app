@@ -73,7 +73,7 @@ const GetTopArtists = () => {
 
     return (
         <>
-        <button  className="text-button" onClick={TopArtistsShortTerm}>Last 4 Weeks</button>   
+        <button   className="text-button" onClick={TopArtistsShortTerm}>Last 4 Weeks</button>   
         <button  className="text-button" onClick={TopArtistsMediumTerm}>Last 6 Months</button>
         <button   className="text-button" onClick={TopArtistsLongTerm}>All Time</button>
 
