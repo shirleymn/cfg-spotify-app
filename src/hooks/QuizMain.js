@@ -103,7 +103,7 @@ export default class Quiz extends Component {
                         }
                         onClick={() => this.nextincrement(increment)}/>
                     </>) : (
-                        <div className='totalScore-section'>You totalScored <br></br> {totalScore} / {Object.keys(questions).length}
+                        <div className='totalScore-section'>You scored: <br></br> {totalScore} / {Object.keys(questions).length}
                             <p className='user-prompt'>Want to know more? <br></br> Go see your top tracks and artists!</p>
                         </div>
                     )
