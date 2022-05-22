@@ -5,7 +5,6 @@ TopSpot is a React web application that uses the Spotify Web API to get the user
 
 ![image](https://user-images.githubusercontent.com/83425650/169695787-4378dbeb-ee19-4edd-9c5e-5651a56e1730.png)
 ![image](https://user-images.githubusercontent.com/83425650/169695824-cedb62a5-749c-4d00-98f2-760b467f08ac.png)
-![image](https://user-images.githubusercontent.com/83425650/169696073-57e4f622-f414-40b2-894b-0ce8f5e4888d.png)
 ![image](https://user-images.githubusercontent.com/83425650/169695967-48ebc646-b551-4f58-8621-aa4937ca4e0e.png)
 
 ## How to Start:
