@@ -6,7 +6,7 @@ import {BsFillArrowRightSquareFill} from "react-icons/bs"
 
 export default class Quiz extends Component {
 
-    // initiating the local state
+    // questions, answers and inital state
     state = {
         questions: {
             1: 'Who was your top artist in the last 4 weeks?',
@@ -26,43 +26,43 @@ export default class Quiz extends Component {
                 4: 'Levitate'
             },
         }, 
-        rightAnswer: {
+        correctAnswers: {
             1: '2',
             2: '1',
         },
         correctAnswer: 0,
-        selectedAnswer: 0,
-        increment: 1,
-        totalScore: 0
+        clickedAnswer: 0,
+        step: 1,
+        score: 0
     }
 
-    // this is a code logic that determines whether or not the answer is correct depending on the users response
+    // code logic that checks whether the user has selected the correct answer
     checkAnswer = answer => {
-        const { rightAnswer, increment, totalScore } = this.state;
-        if(answer === rightAnswer[increment]){
+        const { correctAnswers, step, score } = this.state;
+        if(answer === correctAnswers[step]){
             this.setState({
-                totalScore: totalScore + 1,
-                correctAnswer: rightAnswer[increment],
-                selectedAnswer: answer
+                score: score + 1,
+                correctAnswer: correctAnswers[step],
+                clickedAnswer: answer
             });
         }else{
             this.setState({
                 correctAnswer: 0,
-                selectedAnswer: answer
+                clickedAnswer: answer
             });
         }
     }
 
-    // this is the logic to move to the next questions once the first question is completed
-    nextincrement = (increment) => {
+    // code logic to move onto the next question
+    nextStep = (step) => {
         this.setState({
-            increment: increment + 1,
+            step: step + 1,
             correctAnswer: 0,
-            selectedAnswer: 0
+            clickedAnswer: 0
         });
     }
 
-    // Attempted code to try display the question number on the quiz page
+    // attempted code to add current question number and total questions
     // questionNumber = (state) => {
 
     //     for (const [key] of Object.entries(state.questions)) {
@@ -71,39 +71,40 @@ export default class Quiz extends Component {
 
     // }
 
-    // bject.keys.questions
+    // object.keys.questions
 
     render(){
-        let { questions, answers, correctAnswer, selectedAnswer, increment, totalScore } = this.state;
+        let { questions, answers, correctAnswer, clickedAnswer, step, score } = this.state;
         return(
             <div className="Content">
                   <h1 className='quiz-title'>Quiz</h1>
                  <p className='quiz-subheading'>Discover how in tune you are with your music taste</p>
-                 {/* Attempted code implementation to intergrate the display of the current question and the total number of questions to the user */}
                  {/* <div className='question-count'>
 							<span> Question {Object.keys(questions).indexOf(questions)} </span>/ {Object.keys(questions).length}
 						</div> */}
-                {increment <= Object.keys(questions).length ? 
+                {step <= Object.keys(questions).length ? 
                     (<>
                         <Question
-                            question={questions[increment]}
+                            question={questions[step]}
                         />
                         <Answer
-                            answer={answers[increment]}
-                            increment={increment}
+                            answer={answers[step]}
+                            step={step}
                             checkAnswer={this.checkAnswer}
                             correctAnswer={correctAnswer}
-                            selectedAnswer={selectedAnswer}
+                            clickedAnswer={clickedAnswer}
                         />
                         <BsFillArrowRightSquareFill
                         className="next-question"
                         disabled={
-                            selectedAnswer && Object.keys(questions).length >= increment
+                            clickedAnswer && Object.keys(questions).length >= step
                             ? false : true
                         }
-                        onClick={() => this.nextincrement(increment)}/>
+                        onClick={() => this.nextStep(step)}/>
                     </>) : (
-                        <div className='totalScore-section'>You scored: <br></br> {totalScore} / {Object.keys(questions).length}
+
+                        <div className='score-section'>You have scored <br></br> {score} / {Object.keys(questions).length}
+
                             <p className='user-prompt'>Want to know more? <br></br> Go see your top tracks and artists!</p>
                         </div>
                     )
