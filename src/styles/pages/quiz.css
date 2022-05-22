@@ -66,3 +66,11 @@
     font-size: 20px;
 
 }
+
+.answer-output.true {
+    background-color: rgb(53, 212, 53);
+}  
+
+.answer-output.false {
+    background-color: rgb(206, 58, 58);
+  } 
