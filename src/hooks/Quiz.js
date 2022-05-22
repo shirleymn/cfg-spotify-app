@@ -1,5 +1,4 @@
 import React, { useState } from 'react';
-import QuizTopTracksData from '../QuizTopTracksData';
 
 const QuizLogic = () => {
 	const questions = [
