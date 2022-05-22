@@ -3,31 +3,31 @@ import "../styles/hooks/Answers.css"
 
 const Answer = (props) => {
     let answers = Object.keys(props.answer)
-        .map((userAnswer, i) => (
+        .map((lAnswer, i) => (
             <li
             className=
             {
-                props.correctAnswer === userAnswer ?
+                props.correctAnswer === lAnswer ?
                 'correct' : 
-                props.chosenAnswer === userAnswer ? 
+                props.clickedAnswer === lAnswer ? 
                 'incorrect' : ''
             }
-            onClick={() => props.checkAnswer(userAnswer)}
-            key={userAnswer}>
-                {props.answer[userAnswer]}
+            onClick={() => props.checkAnswer(lAnswer)}
+            key={lAnswer}>
+                {props.answer[lAnswer]}
             </li>
         ));
 
         return (
             <>
-                <ul disabled={props.chosenAnswer ? true : false} className="Answers">
+                <ul disabled={props.clickedAnswer ? true : false} className="Answers">
                     {answers}
                 </ul>
                 <div className='answer-output'>
                     {
                         props.correctAnswer ?
-                        'Answer is Correct!' : 
-                        props.chosenAnswer ? `Answer is Incorrect!` : ''
+                        'Your answer is Correct!' : 
+                        props.clickedAnswer ? `Your answer is Incorrect!` : ''
                     
                     }
                 </div>
