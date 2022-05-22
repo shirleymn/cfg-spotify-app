@@ -1,0 +1,68 @@
+.quiz-title{
+    margin-top: 100px;
+}
+
+.quiz-subheading {
+    font-style: italic;
+    font-weight: 100;
+    font-size: 20px;
+    padding-bottom: 10px;
+
+}
+
+.option-button{
+    background: white;
+    border: none;
+    margin-right: 50px;
+    margin-top: 20px;
+    border: 2px solid black;
+    border-radius: 20px;
+    padding-top:0;
+    cursor: pointer;
+    padding: 30px 16px;
+    text-align: center;
+    line-height: 0px; 
+    font-size: 25px;  
+    display: block; 
+    width: 800px;
+    height: 20px;
+}
+
+.option-button:hover {
+  background-color: #E5E5E5;
+}
+
+
+
+.question-section {
+    font-size: 20px;
+    padding-top: 40px;
+    padding-bottom: 10px;
+    text-align: left;
+    font-weight: 100;
+}
+
+.question-count {
+    padding-top: 40px;
+    padding-bottom: 10px;
+    font-size: 20px;
+    text-align: left;
+    font-weight: 100;
+    font-style: italic;
+
+}
+
+.answer-section {
+    margin-bottom: 150px;
+}
+
+.score-section {
+    font-size: 50px;
+
+}
+
+.user-prompt {
+    padding-top: 40px;
+    font-size: 20px;
+
+}
