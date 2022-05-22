@@ -8,7 +8,7 @@ export default class Quiz extends Component {
 
     // questions, answers and inital state
     state = {
-        quiestions: {
+        questions: {
             1: 'Who was your top artist in the last 4 weeks?',
             2: 'What was your top track in the last 4 weeks?',
         },
@@ -65,27 +65,27 @@ export default class Quiz extends Component {
     // attempted code to add current question number and total questions
     // questionNumber = (state) => {
 
-    //     for (const [key] of Object.entries(state.quiestions)) {
+    //     for (const [key] of Object.entries(state.questions)) {
     //     return `${key}`
     //     }
 
     // }
 
-    // bject.keys.quiestions
+    // object.keys.questions
 
     render(){
-        let { quiestions, answers, correctAnswer, clickedAnswer, step, score } = this.state;
+        let { questions, answers, correctAnswer, clickedAnswer, step, score } = this.state;
         return(
             <div className="Content">
                   <h1 className='quiz-title'>Quiz</h1>
                  <p className='quiz-subheading'>Discover how in tune you are with your music taste</p>
                  {/* <div className='question-count'>
-							<span> Question {Object.keys(quiestions).indexOf(quiestions)} </span>/ {Object.keys(quiestions).length}
+							<span> Question {Object.keys(questions).indexOf(questions)} </span>/ {Object.keys(questions).length}
 						</div> */}
-                {step <= Object.keys(quiestions).length ? 
+                {step <= Object.keys(questions).length ? 
                     (<>
                         <Question
-                            question={quiestions[step]}
+                            question={questions[step]}
                         />
                         <Answer
                             answer={answers[step]}
@@ -97,12 +97,12 @@ export default class Quiz extends Component {
                         <BsFillArrowRightSquareFill
                         className="next-question"
                         disabled={
-                            clickedAnswer && Object.keys(quiestions).length >= step
+                            clickedAnswer && Object.keys(questions).length >= step
                             ? false : true
                         }
                         onClick={() => this.nextStep(step)}/>
                     </>) : (
-                        <div className='score-section'>You have scored <br></br> {score} / {Object.keys(quiestions).length}
+                        <div className='score-section'>You have scored <br></br> {score} / {Object.keys(questions).length}
                             <p className='user-prompt'>Want to know more? <br></br> Go see your top tracks and artists!</p>
                         </div>
                     )
