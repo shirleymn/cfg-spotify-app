@@ -6,9 +6,11 @@ import {render, cleanup} from '@testing-library/react'
 // import { NavLink } from 'react-router-dom';
 
 import renderer from "react-test-renderer"
+import Navbar from '../../Navbar';
 
 
 afterEach(cleanup)
+
 
 
 it("renders without crashing", ()=>{
