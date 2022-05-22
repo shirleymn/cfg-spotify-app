@@ -1,0 +1,30 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`matches snapshot 1`] = `
+<div>
+  <h1>
+    Your Top Tracks
+  </h1>
+  <button
+    className="text-button"
+    onClick={[Function]}
+  >
+    Last 4 Weeks
+  </button>
+  <button
+    className="text-button"
+    onClick={[Function]}
+  >
+    Last 6 Months
+  </button>
+  <button
+    className="text-button"
+    onClick={[Function]}
+  >
+    All Time
+  </button>
+  <br />
+   
+  <br />
+</div>
+`;

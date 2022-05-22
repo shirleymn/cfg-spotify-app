@@ -127,7 +127,6 @@ const QuizTopTracksData = () => {
     return (
         <>
 
-        {/* {TopTracksShortTerm} */}
 
         <button onClick={TopTracksShortTerm}>Hint</button> 
 
@@ -169,4 +168,3 @@ const QuizTopTracksData = () => {
 };
 
 export default QuizTopTracksData;
-// export {TopTracksShortTerm}

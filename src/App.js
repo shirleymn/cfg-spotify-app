@@ -4,7 +4,6 @@ import { BrowserRouter as Router, Routes, Route, withRouter}
     from 'react-router-dom';
 import Authorise from './hooks/Authorise';
 import Home from './pages/home';
-// import Quiz from './pages/quiz';
 import TopArtists from './pages/topartists';
 import TopTracks from './pages/toptracks';
 import Login from './pages/login';

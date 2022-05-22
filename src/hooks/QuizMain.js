@@ -102,7 +102,9 @@ export default class Quiz extends Component {
                         }
                         onClick={() => this.nextStep(step)}/>
                     </>) : (
+
                         <div className='score-section'>You have scored <br></br> {score} / {Object.keys(questions).length}
+
                             <p className='user-prompt'>Want to know more? <br></br> Go see your top tracks and artists!</p>
                         </div>
                     )

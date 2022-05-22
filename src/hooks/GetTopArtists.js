@@ -73,19 +73,13 @@ const GetTopArtists = () => {
 
     return (
         <>
-        <button   className="text-button" onClick={TopArtistsShortTerm}>Last 4 Weeks</button>   
-        <button  className="text-button" onClick={TopArtistsMediumTerm}>Last 6 Months</button>
-        <button   className="text-button" onClick={TopArtistsLongTerm}>All Time</button>
+        <button  className="text-button" onClick={TopArtistsShortTerm}>Last 4 Weeks</button>   
+        <button   className="text-button" onClick={TopArtistsMediumTerm}>Last 6 Months</button>
+        <button  className="text-button" onClick={TopArtistsLongTerm}>All Time</button>
 
         <br/> {/* spacing between buttons and results */}
         <br/>
-        
        
-
-       {/* <Button onClick={TopArtistsShortTerm}/>  */}
-
-        {/* {data?.items ? data.items.map((item) => <p>{item.name}</p>) : null} */}
-        
         {data?.items ? data.items.map((item) =>
             <div className="container" key={item.name + '_' + item.images[1].url}>
                 <div className="rank-column"><p className="rank">{data.items.indexOf(item)+1}</p></div>

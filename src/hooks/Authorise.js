@@ -1,6 +1,7 @@
 import React, {useEffect, useState} from 'react';
 import styled from "styled-components";
 
+// styled components for the 'login to Spotify' button
 
 const Button = styled.h1`
 background-color: ${(props) => bg[props.bg].default};
@@ -39,7 +40,7 @@ function Authorise() {
 
   const [loggedIn, setLoggedIn] = useState(false);
 
-  // REDIRECT_URI will change when we set up a home page  
+  // REDIRECT_URI - after logging in, the user is redirected to the homepage
   const CLIENT_ID = "e5caca910c8b4916ad947b87dc2f36e2"
   const REDIRECT_URI = "http://localhost:3000/home"
   const AUTH_ENDPOINT = "https://accounts.spotify.com/authorize"
@@ -54,12 +55,11 @@ http://localhost:3000/#access_token=BQAZOiNXoNjZdgE03LLGQlpU1XiJwqm9YHKE6sgp_2Om
 example spotify parameters after logging in which generates the user's access token to be used for making requests to API
 */
 
-// getting access token from URL
+// getting access token from URL using string
   const authParams = (hash) => {
     const stringAfterHashtag = hash.substring(1);
     const parametersInUrl = stringAfterHashtag.split("&");
     const parametersSplit = parametersInUrl.reduce((accumulater, currentValue) => {
-      console.log(currentValue);
       const [key, value] = currentValue.split("=");
       accumulater[key] = value;
       return accumulater;
@@ -67,6 +67,8 @@ example spotify parameters after logging in which generates the user's access to
   
     return parametersSplit;
   };
+
+// storing the access token
 
     useEffect(() => {
       if (window.location.hash) {
@@ -82,6 +84,8 @@ example spotify parameters after logging in which generates the user's access to
       }
     });
     
+// when the user presses our app's 'Login to Spotify' button, it directs them to the Spotify login page
+
     const Login = () => {
       window.location = `${AUTH_ENDPOINT}?client_id=${CLIENT_ID}&redirect_uri=${REDIRECT_URI}&scope=${SCOPES_URL_PARAM}&response_type=token&show_dialog=false`;
       
