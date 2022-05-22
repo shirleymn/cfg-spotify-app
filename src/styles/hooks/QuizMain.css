@@ -1,0 +1,65 @@
+.next-question{
+    background-color: white;
+    color: black;
+    cursor: pointer;
+    margin-left: 10px;
+    font-size:3ch;
+  
+ 
+
+  
+  
+}
+.next-question:hover{
+    background-color:lightgray;
+}
+
+.next-question[disabled]{
+    display: none;
+}
+
+/* .finalPage{
+    text-align: center;
+}
+
+.finalPage h1{
+    text-align: center;
+    margin: 15px 0;
+    font-size: 25px;
+    font-family: Arial,sans-serif;
+    font-weight: bold;
+    color: #008416;
+    text-transform: none;
+    text-shadow: none;
+}  */
+
+.score-section {
+    font-size: 50px;
+}
+
+.user-prompt {
+    padding-top: 40px;
+    font-size: 20px;
+
+}
+
+.quiz-title{
+ font: 60.04px;
+ font-family: sans-serif;
+
+}
+.quiz-subheading {
+    font-style: italic;
+    font-weight: 100;
+    font-size: 20px;
+    padding-bottom: 10px;
+}
+/* .question-count {
+    padding-top: 40px;
+    padding-bottom: 10px;
+    font-size: 20px;
+    text-align: left;
+    font-weight: 100;
+    font-style: italic;
+
+} */

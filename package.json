@@ -24,6 +24,8 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
+    "test1": "start-server-and-test dev 3000 cypress:open",
+    "cypress:open": "cypress open",
     "eject": "react-scripts eject"
   },
   "eslintConfig": {
@@ -46,8 +48,10 @@
   },
   "devDependencies": {
     "@testing-library/react": "^13.2.0",
+    "cypress": "^9.6.1",
     "jest-dom": "^4.0.0",
     "msw": "^0.40.2",
-    "react-test-renderer": "^18.1.0"
+    "react-test-renderer": "^18.1.0",
+    "start-server-and-test": "^1.14.0"
   }
 }
