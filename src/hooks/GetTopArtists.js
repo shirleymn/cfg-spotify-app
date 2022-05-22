@@ -79,13 +79,7 @@ const GetTopArtists = () => {
 
         <br/> {/* spacing between buttons and results */}
         <br/>
-        
        
-
-       {/* <Button onClick={TopArtistsShortTerm}/>  */}
-
-        {/* {data?.items ? data.items.map((item) => <p>{item.name}</p>) : null} */}
-        
         {data?.items ? data.items.map((item) =>
             <div className="container" key={item.name + '_' + item.images[1].url}>
                 <div className="rank-column"><p className="rank">{data.items.indexOf(item)+1}</p></div>
